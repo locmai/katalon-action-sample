@@ -1,0 +1,1 @@
+# Katalon GitHub Action Sample
