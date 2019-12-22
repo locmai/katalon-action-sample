@@ -12,6 +12,7 @@ jobs:
           mkdir .katalon/license
           echo "${{ secrets.KATALON_API_KEY }}" > .katalon/license/ci.lic
           pwd
-      # - uses: locmai/katalon-actions@master
-      #   env:
-      #     KATALON_ARGS: "-projectPath=\"./\" -browserType=\"Chrome\" -retry=0 -statusDelay=15 -testSuitePath=\"Test Suites/TS_RegressionTest\""
+      - uses: locmai/katalon-actions@master
+        env:
+          KATALON_ARGS: "-projectPath=\"./\" -browserType=\"Chrome\" -retry=0 -statusDelay=15 -testSuitePath=\"Test Suites/TS_RegressionTest\""
+          HOME: ${{ env.GITHUB_WORKSPACE }}
