@@ -1,1 +1,1 @@
-# Katalon GitHub Action
+# Katalon GitHub Action Sample
