@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: locmai/katalon-actions@master
         with:
-          api-key: '6fd50433-4aa9-49f7-9b2d-549b50c88aff'
+          api-key: ${{ secrets.KATALON_API_KEY }}
           command-line: 'katalon-execute.sh -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
