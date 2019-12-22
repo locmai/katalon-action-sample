@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Retrieve license
-        run: echo "${{ secrets.KATALON_API_KEY }}" > /root/.katalon/license/ci.lic
+        run: echo "${{ secrets.KATALON_API_KEY }}" > .katalon/license/ci.lic
       - uses: locmai/katalon-actions@master
         env:
           KATALON_ARGS: "-projectPath=\"./\" -browserType=\"Chrome\" -retry=0 -statusDelay=15 -testSuitePath=\"Test Suites/TS_RegressionTest\""
