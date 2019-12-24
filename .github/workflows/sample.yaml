@@ -6,13 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Retrieve license
-        run: |
-          mkdir .katalon
-          mkdir .katalon/license
-          echo "${{ secrets.KATALON_API_KEY }}" > .katalon/license/ci.lic
-          pwd
       - uses: locmai/katalon-actions@master
         env:
-          KATALON_ARGS: "-projectPath=\"./\" -browserType=\"Chrome\" -retry=0 -statusDelay=15 -testSuitePath=\"Test Suites/TS_RegressionTest\""
-          HOME: $GITHUB_WORKSPACE
+          KATALON_ARGS: "-apiKey=\"${{ secrets.KATALON_API_KEY }}\" -projectPath=\"./\" -browserType=\"Chrome\" -retry=0 -statusDelay=15 -testSuitePath=\"Test Suites/TS_RegressionTest\""
