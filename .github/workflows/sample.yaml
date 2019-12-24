@@ -9,4 +9,4 @@ jobs:
       - uses: locmai/katalon-actions@master
         with:
           api-key: ${{ secrets.KATALON_API_KEY }}
-          command: '-projectPath="./" -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"'
+          command: -projectPath="./" -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
