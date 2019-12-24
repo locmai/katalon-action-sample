@@ -8,4 +8,4 @@ jobs:
       - uses: actions/checkout@master
       - uses: locmai/katalon-actions@master
         env:
-          KATALON_ARGS: "-apiKey=\"${{ secrets.KATALON_API_KEY }}\" -projectPath=\"./\" -browserType=\"Chrome\" -retry=0 -statusDelay=15 -testSuitePath=\"Test Suites/TS_RegressionTest\""
+          KATALON_ARGS: -apiKey="${{ secrets.KATALON_API_KEY }}" -projectPath="./" -browserType="Chrome" -retry=0 -statusDelay=15 -testSuitePath="Test Suites/TS_RegressionTest"
